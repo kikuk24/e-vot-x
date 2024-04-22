@@ -28,20 +28,19 @@ defined('BASEPATH') or exit('No direct script access allowed');
     <ol class="breadcrumb mb-4">
       <li class="breadcrumb-item active">Ikatan Pelajar Muhammadiyah</li>
     </ol>
-    
+
     <canvas id="myChart" width="80%"></canvas>
     <?php
     $suara = '';
     $nama = '';
     foreach ($calon as $c) {
-        $suara .= $c->JUMLAH . ',';
-        $nama .= "'" . $c->NM_CALON . "',";
+      $suara .= $c->JUMLAH . ',';
+      $nama .= "'" . $c->NM_CALON . "',";
     }
     ?>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script type="text/javascript">
-    console.log(<?= $nama ?>);
     const ctx = document.getElementById('myChart').getContext('2d');
 
     new Chart(ctx, {

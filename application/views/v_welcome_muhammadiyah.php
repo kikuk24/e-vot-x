@@ -46,7 +46,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 								<span class="subtitle bg-white-opacity">E-Voting Online</span>
 							</a>
 							<h2 class="title color-white"><strong><?= $config->NM_CONFIG ?></strong></h2>
-							<p><?= $config->KETERANGAN ?></p>
+							<p class="text-warning"><?= $config->KETERANGAN ?></p>
 
 						</div>
 						<form action="<?= site_url('muhammadiyah/check') ?>" method="post" class="newsletter-form-1 mt--40">
@@ -64,7 +64,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 						<?php endif; ?>
 
 						<?php if ($this->session->flashdata('gagal')) : ?>
-							<span class="subtitle bg-white-opacity"><?= $this->session->flashdata('gagal') ?></span>
+							<span class="subtitle bg-white text-danger"><?= $this->session->flashdata('gagal') ?></span>
 						<?php endif; ?>
 					</div>
 				</div>

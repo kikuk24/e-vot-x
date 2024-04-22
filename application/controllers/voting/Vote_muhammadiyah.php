@@ -1,6 +1,7 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
-
+// ! Nomor Urut Calon
+// ! view cetak
 class Vote_muhammadiyah extends CI_Controller
 {
 	public function __construct()
