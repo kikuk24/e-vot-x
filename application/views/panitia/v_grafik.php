@@ -29,7 +29,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
       <li class="breadcrumb-item active">Ikatan Pelajar Muhammadiyah</li>
     </ol>
 
-    <canvas id="myChart" width="80%"></canvas>
+    <div id="chart" width="80%"></div>
     <?php
     $suara = '';
     $nama = '';
@@ -39,37 +39,65 @@ defined('BASEPATH') or exit('No direct script access allowed');
     }
     ?>
   </div>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
   <script type="text/javascript">
-    const ctx = document.getElementById('myChart').getContext('2d');
-
-    new Chart(ctx, {
-      type: 'bar',
-      data: {
-        labels: [<?= $nama; ?>],
-        datasets: [{
-          label: 'Jumlah Suara',
-          // backgroundColor: ['rgb(255, 205, 86)'],
-          // borderColor: ['rgb(255, 99, 132)', 'rgb(255, 159, 64)', 'rgb(255, 205, 86)', 'rgb(75, 192, 192)', 'rgb(54, 162, 235)', 'rgb(153, 102, 255)', 'rgb(201, 203, 207)'],
-          data: [<?= $suara; ?>],
-          borderWidth: 1
-        }]
-      },
-      options: {
-        scales: {
-          y: {
-            beginAtZero: true
+    var options = {
+      chart: {
+        type: 'bar',
+        height: 500,
+        id: 'realtime',
+        animations: {
+          enabled: true,
+          easing: 'linear',
+          dinamicAnimation: {
+            speed: 1000
           }
         }
-      }
-    });
+      },
+      plotOptions: {
+        bar: {
+          horizontal: true,
+        }
+      },
+      dataLabels: {
+        enabled: false
+      },
+      stroke: {
+        curve: 'smooth',
+      },
+      title: {
+        text: 'Grafik Perolehan Suara',
+        align: 'center'
+      },
+      legend: {
+        show: false
+      },
+      tooltip: {
+        enabled: true
+      },
+      series: [{
+        name: 'suara',
+        data: [<?= $suara; ?>]
+      }],
+      xaxis: {
+        categories: [<?= $nama; ?>]
+      },
+    }
+
+    var chart = new ApexCharts(document.querySelector("#chart"), options);
+
+    chart.render();
+
+    window.setInterval(function() {
+      chart.updateSeries([{
+        data: [<?= $suara; ?>]
+      }])
+    }, 1000);
   </script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
   <script src="<?= base_url('aset') ?>/js/scripts.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
-  <script src="<?= base_url('aset') ?>/assets/demo/chart-area-demo.js"></script>
-  <script src="<?= base_url('aset') ?>/assets/demo/chart-bar-demo.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js" crossorigin="anonymous"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script> -->
+  <!-- <script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js" crossorigin="anonymous"></script> -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <!-- <script src="<?= base_url('aset') ?>/js/datatables-simple-demo.js"></script> -->

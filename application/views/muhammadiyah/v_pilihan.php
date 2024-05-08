@@ -30,7 +30,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 					<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12" data-sal-delay="150" data-sal="slide-up" data-sal-duration="800">
 						<div class="rbt-card variation-03 rbt-hover">
 							<div class="">
-								<h5 class="text-center"><?= $row->NBM ?></h5>
+								<h5 class="text-center"><?= $row->NO_URUT ?></h5>
 							</div>
 							<div class="rbt-card-img">
 								<a class="thumbnail-link" href="<?= site_url('voting/vote_muhammadiyah/pilih/' . $row->ID_CALON) ?>">

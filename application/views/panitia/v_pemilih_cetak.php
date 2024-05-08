@@ -49,7 +49,8 @@ defined('BASEPATH') or exit('No direct script access allowed');
         .card {
             border: none;
             border-radius: 0;
-            margin-bottom: 30px;
+            background: white;
+            margin-bottom: 0px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 
         }
@@ -68,7 +69,6 @@ defined('BASEPATH') or exit('No direct script access allowed');
                         </div>
                         <div class="card-body">
                             <p class="cetak"><?= $row->NM_PEMILIH ?></p>
-                            <p class="cetak"><?= $row->NBM ?></p>
                             <p class="kode"><?= $row->KODE ?></p>
                         </div>
                     </div>

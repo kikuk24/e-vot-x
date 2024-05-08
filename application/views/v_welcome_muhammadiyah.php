@@ -42,7 +42,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 				<div class="col-lg-12">
 					<div class="inner text-center">
 						<div class="section-title text-center">
-							<a href="<?= site_url() ?>">
+							<a href="<?= site_url('panitia') ?>">
 								<span class="subtitle bg-white-opacity">E-Voting Online</span>
 							</a>
 							<h2 class="title color-white"><strong><?= $config->NM_CONFIG ?></strong></h2>
