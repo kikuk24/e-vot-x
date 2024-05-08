@@ -7,13 +7,13 @@ defined('BASEPATH') or exit('No direct script access allowed');
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Musyawarah Cabang Muhammadiyah | Kec. Tegalrejo.</title>
+    <title>MUSYCAB XVII IPM KECAMATAN BRONDONG</title>
     <meta name="robots" content="noindex, follow" />
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Favicon -->
-    <link rel="shortcut icon" type="image/x-icon" href="<?= base_url() ?>assets/images/favicon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="<?= base_url() ?>assets/images/ipm.png">
 
     <!-- CSS
 	============================================ -->

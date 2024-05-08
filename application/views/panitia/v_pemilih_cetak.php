@@ -6,61 +6,76 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Cetak Tiket Pemilihan</title>
+    <title>Tiket Pemilihan Musycab</title>
+    <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
+    <link href="<?= base_url('aset') ?>/css/styles.css" rel="stylesheet" />
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <style type="text/css">
+        @media print {
+
+            body,
+            page {
+                background: white;
+                margin: 0;
+                box-shadow: 0;
+            }
+        }
+
         .judul {
             font-family: Arial, Helvetica, sans-serif;
-            font-size: 16pt;
+            font-size: 11pt;
             font-weight: bold;
+            text-transform: uppercase;
+            text-align: center;
         }
 
         .kode {
             font-family: Arial, Helvetica, sans-serif;
             font-size: 20pt;
             font-weight: bold;
+            text-align: center;
         }
 
         .cetak {
             font-family: Arial, Helvetica, sans-serif;
-            font-size: 12pt;
+            font-size: 8pt;
+            text-transform: uppercase;
+            text-align: center;
+        }
+
+        .card {
+            border: none;
+            border-radius: 0;
+            margin-bottom: 30px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
         }
     </style>
+    <link rel="shortcut icon" type="image/x-icon" href="<?= base_url() ?>assets/images/ipm.png">
 </head>
 
 <body>
-    <?php foreach ($pemilih as $row) { ?>
-        <table width="100%" border="1" bordercolor="#778899" cellspacing="0" cellpadding="0">
-            <tr bgcolor="#3CB371">
-                <td height="40" colspan="3" align="center" valign="middle" class="judul">KARTU PEMILIHAN E-VOTING</td>
-            </tr>
-            <tr>
-                <td width="15%" height="104" align="center" valign="middle" class="kode"><?= $row->KODE ?></td>
-                <td width="10%" align="center" valign="middle"><img src="<?= base_url() ?>/file/foto/<?= $row->FOTO ?>" height="60" width="50" /></td>
-                <td width="85%" align="left" valign="middle">
-                    <table width="90%" border="0" align="center" cellpadding="3" cellspacing="0">
-                        <tr>
-                            <td width="23%"><span class="cetak">NBM</span></td>
-                            <td width="7%" align="center" valign="middle"><span class="cetak">:</span></td>
-                            <td width="70%"><span class="cetak"><b><?= $row->NBM ?></b></span></td>
-                        </tr>
-                        <tr>
-                            <td><span class="cetak">Nama Lengkap </span></td>
-                            <td align="center" valign="middle"><span class="cetak">:</span></td>
-                            <td><span class="cetak"><b><?= $row->NM_PEMILIH ?></b></span></td>
-                        </tr>
-                        <tr>
-                            <td><span class="cetak">Kode E-Voting</span></td>
-                            <td align="center" valign="middle"><span class="cetak">:</span></td>
-                            <td><span class="cetak"><b><?= $row->KODE ?></b></span></td>
-                        </tr>
-                    </table>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="3" align="center" valign="middle">&nbsp;</td>
-            </tr>
-        </table><br>
-    <?php } ?>
+    <div class="container">
+        <div class="row g-3">
+            <?php foreach ($pemilih as $row) { ?>
+                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h1 class="judul">kode kartu suara</h1>
+                        </div>
+                        <div class="card-body">
+                            <p class="cetak"><?= $row->NM_PEMILIH ?></p>
+                            <p class="cetak"><?= $row->NBM ?></p>
+                            <p class="kode"><?= $row->KODE ?></p>
+                        </div>
+                    </div>
+                </div>
+            <?php } ?>
+        </div>
+    </div>
 </body>
 
 </html>

@@ -32,7 +32,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 							<div class="">
 								<h5 class="text-center"><?= $row->NBM ?></h5>
 							</div>
-							<div class=" rbt-card-img">
+							<div class="rbt-card-img">
 								<a class="thumbnail-link" href="<?= site_url('voting/vote_muhammadiyah/pilih/' . $row->ID_CALON) ?>">
 									<img src="<?= base_url() ?>file/foto/<?= $row->FOTO ?>" alt="<?= $row->NM_CALON ?>">
 									<span class="rbt-btn btn-white icon-hover btn-md">
