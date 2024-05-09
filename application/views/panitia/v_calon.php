@@ -28,7 +28,6 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 <thead>
                     <tr>
                         <th>No</th>
-                        <th>NBM</th>
                         <th>Nama Lengkap</th>
                         <th>Asal</th>
                         <th>Foto</th>
@@ -40,8 +39,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                     <?php $no = 1;
                     foreach ($calon as $row) { ?>
                         <tr>
-                            <td><?= $no++ . '.' ?></td>
-                            <td><?= $row->NBM ?></td>
+                            <td><?= $row->NO_URUT ?></td>
                             <td><?= $row->NM_CALON ?></td>
                             <td><?= $row->ASAL_CALON ?></td>
                             <td><img src="<?= base_url() ?>/file/foto/<?= $row->FOTO ?>" height="60" width="50" /></td>

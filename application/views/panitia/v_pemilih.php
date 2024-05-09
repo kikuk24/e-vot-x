@@ -27,7 +27,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 <thead>
                     <tr>
                         <th>No</th>
-                        <th>NBM</th>
+                        <th>Asal Pimpinan</th>
                         <th>Nama Lengkap</th>
                         <th>Foto</th>
                         <th>Aksi</th>

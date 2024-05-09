@@ -45,7 +45,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
       chart: {
         type: 'bar',
         height: 500,
-        id: 'realtime',
+
         animations: {
           enabled: true,
           easing: 'linear',
@@ -69,12 +69,6 @@ defined('BASEPATH') or exit('No direct script access allowed');
         text: 'Grafik Perolehan Suara',
         align: 'center'
       },
-      legend: {
-        show: false
-      },
-      tooltip: {
-        enabled: true
-      },
       series: [{
         name: 'suara',
         data: [<?= $suara; ?>]
@@ -87,12 +81,6 @@ defined('BASEPATH') or exit('No direct script access allowed');
     var chart = new ApexCharts(document.querySelector("#chart"), options);
 
     chart.render();
-
-    window.setInterval(function() {
-      chart.updateSeries([{
-        data: [<?= $suara; ?>]
-      }])
-    }, 1000);
   </script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
   <script src="<?= base_url('aset') ?>/js/scripts.js"></script>

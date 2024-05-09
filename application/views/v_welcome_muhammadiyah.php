@@ -36,7 +36,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 </head>
 
 <body class="rbt-header-sticky">
-	<div class="rbt-newsletter-area newsletter-style-2 bg-color-primary rbt-section-gap">
+	<div class="rbt-newsletter-area newsletter-style-2 bg-color-primary rbt-section-gap ">
 		<div class="container">
 			<div class="row row--15 align-items-center">
 				<div class="col-lg-12">
@@ -71,7 +71,15 @@ defined('BASEPATH') or exit('No direct script access allowed');
 			</div>
 		</div>
 	</div>
-
+	<!-- Start Footer Area  -->
+	<footer class="rbt-footer footer-style-1 bg-color-primary">
+		<div class="container">
+			<div class="row p-5">
+				<p class="text-white text-center bg-dark">Web Developer Kikuk Code | UI/UX Designer Yinbee Creation | Quality Assurance Tester Sar.co </p>
+			</div>
+		</div>
+	</footer>
+	<!-- End Footer Area  -->
 	<!-- Start Copyright Area  -->
 	<div class="copyright-area copyright-style-1 ptb--20">
 		<div class="container">

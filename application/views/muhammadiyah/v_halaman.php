@@ -45,7 +45,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 	<!-- End Banner Area  -->
 
 	<!-- Start Footer aera -->
-
+	
 
 	<!-- Start Copyright Area  -->
 	<div class="copyright-area copyright-style-1 ptb--20">

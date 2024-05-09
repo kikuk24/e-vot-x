@@ -90,7 +90,11 @@ defined('BASEPATH') or exit('No direct script access allowed');
 	<!-- End Banner Area  -->
 
 	<!-- Start Footer aera -->
-
+	<footer class="">
+		Developer : Kikuk Code
+		UI/UX : Yinbee Creation
+		DevOps : Alpin Sarping
+	</footer>
 
 	<!-- Start Copyright Area  -->
 	<div class="copyright-area copyright-style-1 ptb--20">

@@ -4,7 +4,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 <!-- Start Card Style -->
 <div class="rbt-course-card-area rbt-section-gap bg-color-white">
 	<div class="container">
-		<div class="row align-items-center mb--60">
+		<div class="row align-items-center mb--60 fixed-top bg-color-white">
 			<div class="col-lg-12">
 				<div class="section-title text-center">
 
