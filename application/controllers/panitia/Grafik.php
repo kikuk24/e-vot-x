@@ -10,10 +10,15 @@ class Grafik extends CI_Controller{
       redirect(site_url("panitia"));
     }
   }
-  public function index(){ {
+  public function index()
+  { 
       $this->data['calon'] = $this->Calon_model->getSuara('1');
       $this->data['halaman'] = 'panitia/v_grafik';
       $this->load->view('panitia/v_home', $this->data);
-    }
+  }
+  public function get_suara()
+  {
+    $data = $this->Calon_model->getSuara('1');
+    echo json_encode($data);
   }
 }
